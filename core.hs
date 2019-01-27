@@ -83,11 +83,13 @@ cross (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ay*bz) - (b
 
 
 
+-- _________________________________________________________________
 
 
-
-
-
+data Matrix = Matrix1f [Float]
+              | Matrix2f ([Float], [Float])
+              | Matrix3f ([Float], [Float], [Float])
+              | Matrix4f ([Float], [Float], [Float], [Float])
 
 
 
