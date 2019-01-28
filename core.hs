@@ -197,6 +197,13 @@ mulMat (Matrix4f matA) (Matrix4f matB) = Matrix4f (mulMatData4f matA matB)
 
 
 
+-- Vector * Matrix operations
+
+addMatVec :: Matrix -> Vector -> Matrix
+addMatVec (Matrix1f matA) (Vector1f) = matA
+
+
+
 
 
 
