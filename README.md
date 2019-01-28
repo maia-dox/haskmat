@@ -1,2 +1,2 @@
 
-Currently supports Vectors in 1 -> 4 dimensions.
+Haskmat is a Haskell-based Vector and Matrix Math libary.
