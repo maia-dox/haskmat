@@ -1,7 +1,5 @@
-module HSMatrix where
+module HSVector where
 
--- a Vector / Matrix Math library for Haskell
--- author : Jim Doxtader
 
 
 data Vector = Vector1f Float 
@@ -9,7 +7,6 @@ data Vector = Vector1f Float
               | Vector3f (Float, Float, Float) 
               | Vector4f (Float, Float, Float, Float)
               deriving(Show, Eq)
-
 
 
 
@@ -78,34 +75,3 @@ dot (Vector4f (ax, ay, az, a4)) (Vector4f (bx, by, bz, b4)) =  (ax * bx) + (ay *
 -- cross product
 cross :: Vector -> Vector -> Vector
 cross (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ay*bz) - (by*az)), ((az*bx) - (ax*bz)), ((ax*by) - (bx*ay)) ) 
-
-
-
-
-
--- _________________________________________________________________
-
-
-data Matrix = Matrix1f [Float]
-              | Matrix2f [[Float]]
-              | Matrix3f [[[Float]]]
-              | Matrix4f [[[[Float]]]]
-                deriving(Show, Eq)
-
-
--- take in two rows of data from a Matrix, and return the combined row. (Float)
-addMatfRow :: [Float] -> [Float] -> [Float]
-addMatfRow [] [] = []
-addMatfRow (x:xs) (y:ys) = (x + y) : (addMatfRow xs ys) 
-addMatfRow [] ys = ys
-addMatfRow xs [] = xs
-
-addmat :: Matrix -> Matrix -> Matrix
-addmat (Matrix1f xs) (Matrix1f ys) = Matrix1f (addMatfRow xs ys)
--- addmat (Matrix2f ma) (Matrix2f mb) = Matrix2f ( [ (addMatfRow) ])
-
---submat :: Matrix -> Matrix -> Matrix
-
-
---multiplyMat
-
