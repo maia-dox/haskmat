@@ -87,11 +87,20 @@ cross (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ay*bz) - (b
 
 
 data Matrix = Matrix1f [Float]
-              | Matrix2f ([Float], [Float])
-              | Matrix3f ([Float], [Float], [Float])
-              | Matrix4f ([Float], [Float], [Float], [Float])
+              | Matrix2f [[Float]]
+              | Matrix3f [[[Float]]]
+              | Matrix4f [[[[Float]]]]
+                deriving(Show, Eq)
 
 
+-- take in two rows of data from a Matrix, and return the combined row. (Float)
+addMatfRow :: [Float] -> [Float] -> [Float]
+addMatfRow [] [] = []
+addMatfRow (x:xs) (y:ys) = (x + y) : (addMatfRow xs ys) 
+addMatfRow [] ys = ys
+addMatfRow xs [] = xs
 
-
-
+addmat :: Matrix -> Matrix -> Matrix
+addmat [] [] = []
+addmat (Matrix1f xs) (Matrix1f ys) = Matrix1f (addMatfRow xs ys)
+addmat (Matrix2f ma) (Matrix2f mb) = (map addMatfRow ma mb)
