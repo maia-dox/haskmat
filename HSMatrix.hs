@@ -1,7 +1,6 @@
 module HSMatrix where
 import HSVector
--- a Vector / Matrix Math library for Haskell
--- author : Jim Doxtader
+
 
 data Matrix = Matrix1f [Float]
               | Matrix2f [[Float]]
