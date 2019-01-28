@@ -10,6 +10,11 @@ data Matrix = Matrix1f [Float]
                 deriving(Show, Eq)
 
 
+
+
+
+
+
 -- take in two rows of data from a Matrix, and return the combined row. (Float)
 addMatRow :: [Float] -> [Float] -> [Float]
 addMatRow [] [] = []
