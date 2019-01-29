@@ -1,5 +1,5 @@
-module HSMatrix where
-import HSVector
+module HXMatrix where
+import HXVector
 
 
 data Matrix = Matrix1f [Float]

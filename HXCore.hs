@@ -1,4 +1,4 @@
-module HSCore where
+module HXCore where
 
 import HSMatrix
 
