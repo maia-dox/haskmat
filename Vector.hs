@@ -1,4 +1,4 @@
-module HKVector where
+module Vector where
 
 
 
