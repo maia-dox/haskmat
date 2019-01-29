@@ -1,6 +1,6 @@
-module HXCore where
+module HKCore where
 
-import HSMatrix
+import HKMatrix
 
 -- A Haskell Matrix and Vector Math library. 
 -- author Jim Doxtader

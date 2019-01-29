@@ -1,5 +1,5 @@
-module HXMatrix where
-import HXVector
+module HKMatrix where
+import HKVector
 
 
 data Matrix = Matrix1f [Float]
