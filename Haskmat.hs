@@ -1,5 +1,5 @@
 module Haskmat where
-import Core
+import Hasky.Core
 import Matrix
 import Vector
 import Stack
