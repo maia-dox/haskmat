@@ -1,5 +1,18 @@
 module Stack where
 
-    test :: Float -> Float
-    test ph = 3
-    
+
+data Stack a = Stack [a]
+        deriving (Show, Eq)
+
+
+stack_push :: Stack a -> a -> Stack a
+stack_push (Stack xs) x = Stack (x:xs)
+
+stack_peek :: Stack a -> a
+stack_peek (Stack (x:xs)) = x
+
+stack_rm :: Stack a -> Stack a
+stack_rm (Stack (x:xs)) = Stack xs
+
+
+        
