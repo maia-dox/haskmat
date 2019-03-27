@@ -1,5 +1,6 @@
 module BitConvert where
 import Data.Char
+
 -- int -> bit and hex utils
 
 
@@ -64,11 +65,6 @@ hex_to_int (c:cs)
 	| otherwise = (digitToInt c) + (hex_to_int cs)
 	where
 	msb = length cs
-
-
-
-
-
 
 
 
