@@ -15,10 +15,10 @@ stack_peek (Stack (x:xs)) = x
 
 stack_rm :: Stack a -> Stack a
 stack_rm (Stack (x:xs)) = Stack xs
-stack_rm [] = []
+stack_rm (Stack []) = Stack []
 
 
 stack_isEmpty :: Stack a -> Bool
-stack_isEmpty [] = True
+stack_isEmpty (Stack []) = True
 stack_isEmpty _ = False
 

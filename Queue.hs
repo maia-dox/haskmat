@@ -14,5 +14,5 @@ queue_rm :: Queue a -> Queue a
 queue_rm (Queue (x:xs)) = Queue xs
 
 queue_isEmpty :: Queue a -> Bool
-queue_isEmpty [] = True
+queue_isEmpty (Queue []) = True
 queue_isEmpty _ = False
