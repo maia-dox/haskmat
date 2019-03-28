@@ -1,10 +1,10 @@
 module Core where
-	import Vector
-	import Matrix
-	import Queue
-	import Stack
-	import BitConvert	
-	import Ackermann
+        import Vector
+        import Matrix
+        import Queue   
+        import Stack
+        import BitConvert
+        import Ackermann
 
 -- A Haskell Matrix and Vector Math library. 
 -- author Jim Doxtader
