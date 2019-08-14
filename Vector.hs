@@ -75,3 +75,8 @@ dot (Vector4f (ax, ay, az, a4)) (Vector4f (bx, by, bz, b4)) =  (ax * bx) + (ay *
 -- cross product
 cross :: Vector -> Vector -> Vector
 cross (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ay*bz) - (by*az)), ((az*bx) - (ax*bz)), ((ax*by) - (bx*ay)) ) 
+
+-- mix 2 vectors
+mix :: Vector -> Vector -> Vector
+mix (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ax + bx)/2) , ((ay + by)/2), ((az + bz)/2))
+
