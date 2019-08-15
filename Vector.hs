@@ -1,14 +1,10 @@
 module Vector where
 
-
-
 data Vector = Vector1f Float 
               | Vector2f (Float, Float) 
               | Vector3f (Float, Float, Float) 
               | Vector4f (Float, Float, Float, Float)
               deriving(Show, Eq)
-
-
 
 
 -- subtract vector b from vector a
@@ -35,7 +31,6 @@ magv (Vector3f (x, y, z)) = abs ( sqrt( (x^2) + (y^2) + (z^2) ))
 magv (Vector4f (x, y, z, d4) ) = abs ( sqrt( (x^2) + (y^2) + (z^2) + (d4^2) ))
 
 
-
 -- direction of vector
 dirv :: Vector -> Vector
 dirv (Vector1f v) = Vector1f v
@@ -52,14 +47,12 @@ dirv (Vector4f (x, y, z, d4)) = Vector4f( (x / absMag), (y / absMag), (z / absMa
         absMag = abs (magv (Vector4f(x, y, z, d4)) )
 
 
-
 -- scale vector
 scale :: Vector -> Float -> Vector
 scale (Vector1f v) m = Vector1f (v * m)
 scale (Vector2f (x, y)) m = Vector2f((x * m), (y * m))
 scale (Vector3f (x, y, z)) m = Vector3f((x * m), (y * m), (z * m))
 scale (Vector4f (x, y, z, d4)) m = Vector4f((x * m), (y * m), (z * m), (d4 * m))
-
 
 
 -- dot product 
@@ -70,13 +63,11 @@ dot (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = (ax * bx) + (ay * by) + (a
 dot (Vector4f (ax, ay, az, a4)) (Vector4f (bx, by, bz, b4)) =  (ax * bx) + (ay * by) + (az * bz) + (a4 * b4) 
 
 
-
-
 -- cross product
 cross :: Vector -> Vector -> Vector
 cross (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ay*bz) - (by*az)), ((az*bx) - (ax*bz)), ((ax*by) - (bx*ay)) ) 
 
+
 -- mix 2 vectors
 mix :: Vector -> Vector -> Vector
 mix (Vector3f (ax, ay, az)) (Vector3f (bx, by, bz)) = Vector3f ( ((ax + bx)/2) , ((ay + by)/2), ((az + bz)/2))
-
