@@ -1,2 +1,2 @@
 
-Haskmat is a Math/Data Structures library, including Matrix utilities, Vectors, and Stacks.
+Haskmat is a Math/Data Structures library, including Vector/Matrix operations, and Stacks + Queues.
