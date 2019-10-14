@@ -120,7 +120,4 @@ convertVecMat :: Vector -> Matrix
 convertVecMat (Vector1f x) = Matrix1f ([x])
 
 
-addMatVec :: Matrix -> Vector -> Matrix
-addMatVec (Matrix1f matA) (Vector1f x) = Matrix1f matA
 
--- TODO : transformation functions 
