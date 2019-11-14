@@ -12,7 +12,6 @@ ackermann m n = ackermann (m-1) (ackermann m (n-1))
 
 
 
--- **causes stack overflow on most computers**
 super_ack :: Integer -> Integer -> Integer
 super_ack 0 n = n + 1
 super_ack m 0 = super_ack (m-1) 1
