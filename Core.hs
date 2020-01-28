@@ -1,6 +1,5 @@
 module Core where
         import Vector
-        import Matrix
         import Queue   
         import Stack
         import BitConvert
